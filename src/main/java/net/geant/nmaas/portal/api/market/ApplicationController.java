@@ -148,13 +148,11 @@ public class ApplicationController extends AppBaseController {
 		// only system admin and owner can update application base
 		this.applicationBaseOwnerCheck(base.getName(), principal);
 		ApplicationState state = ApplicationState.DELETED;
-		base.getVersions().forEach(v -> {
-			if (!v.isDeleted()) {
-				Application app = getApp(v.getAppVersionId());
-				applicationService.changeApplicationState(app, state);
-				appBaseService.updateApplicationVersionState(app.getName(), app.getVersion(), state);
-			}
-		});
+        for (ApplicationVersion appVersion : base.getVersions()) {
+            Application app = getApp(appVersion.getAppVersionId());
+            applicationService.changeApplicationState(app, state);
+            appVersion.setState(state);
+        }
 
 		appBaseService.deleteAppBase(base);
 	}
