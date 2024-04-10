@@ -24,8 +24,8 @@ public class CustomAccessTokenServiceImpl implements CustomAccessTokenService {
     }
 
     @Override
-    public AccessToken createToken(Long userId) {
-        AccessToken token = createNewToken(userId);
+    public AccessToken createToken(Long userId, String name) {
+        AccessToken token = createNewToken(userId, name);
         return accessTokenRepository.save(token);
     }
 
@@ -34,8 +34,9 @@ public class CustomAccessTokenServiceImpl implements CustomAccessTokenService {
         return accessTokenRepository.findAllByUserId(userId);
     }
 
-    private AccessToken createNewToken(Long userId) {
+    private AccessToken createNewToken(Long userId, String name) {
         AccessToken token = new AccessToken();
+        token.setName(name);
         token.setUserId(userId);
         token.setTokenValue(generateToken());
         token.setValid(true);

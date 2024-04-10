@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,9 +34,9 @@ public class CustomAccessTokenController {
     }
 
     @PostMapping()
-    public AccessToken createNewToken(Principal principal) {
+    public AccessToken createNewToken(Principal principal, @RequestBody String name) {
         User user = getUser(principal);
-        return accessTokenService.createToken(user.getId());
+        return accessTokenService.createToken(user.getId(), name);
     }
 
     @PutMapping("/{id}")

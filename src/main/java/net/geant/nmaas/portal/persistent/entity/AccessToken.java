@@ -23,6 +23,8 @@ public class AccessToken {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
+
     private Long userId;
 
     private String tokenValue;
