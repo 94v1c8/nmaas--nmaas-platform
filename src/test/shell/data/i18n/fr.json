@@ -1151,6 +1151,18 @@
       }
     }
   },
+  "TOKENS": {
+    "HEADER": "Tokens",
+    "TABLE": {
+      "ID": "ID",
+      "VALUE": "Value",
+      "VALID": "Valid",
+      "ACTIONS": "Actions"
+    },
+    "BUTTON_INVALIDATE": "Invalidate",
+    "NO_TOKENS": "No tokens",
+    "NEW_TOKEN": "New token"
+  },
   "JSON_EDIT": {
     "INVALID_JSON": "Invalid JSON format. Changes made to the content of the wizard will not be persisted."
   },

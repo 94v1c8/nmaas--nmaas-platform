@@ -1152,6 +1152,18 @@
       }
     }
   },
+  "TOKENS": {
+    "HEADER": "Tokens",
+    "TABLE": {
+      "ID": "ID",
+      "VALUE": "Value",
+      "VALID": "Valid",
+      "ACTIONS": "Actions"
+    },
+    "BUTTON_INVALIDATE": "Invalidate",
+    "NO_TOKENS": "No tokens",
+    "NEW_TOKEN": "New token"
+  },
   "JSON_EDIT": {
     "INVALID_JSON": "Niewłaściwy format JSON. Zmiany wprowadzone do zawartości formularza nie zostaną zapisane."
   },
