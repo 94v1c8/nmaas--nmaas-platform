@@ -43,13 +43,6 @@ public class CustomAccessTokenController {
         accessTokenService.invalidate(id);
     }
 
-    @GetMapping("/test")
-    public String testSecurity() {
-        return "works";
-    }
-
-
-
     private User getUser(Principal principal) {
         String principalName = principal.getName();
         return userService.findByUsername(principalName)

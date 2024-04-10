@@ -43,6 +43,7 @@ public class CustomAccessTokenServiceImpl implements CustomAccessTokenService {
         }
 
     private String generateToken() {
+        // uuid is a placeholder for now
         return UUID.randomUUID().toString();
     }
 
