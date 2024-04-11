@@ -22,7 +22,7 @@ By default, the REST API will be exposed at *http://localhost:9000/api*.
 
 ### Running NMaaS Platform on dedicated server machine
 
-In order to run the NMaaS Platform on dedicated machine perform the following steps:
+To run the NMaaS Platform on a dedicated machine, perform the following steps:
 + Build the NMaaS Platform with *./gradlew clean build* command project root directory.
 + Retrieve the output executable *nmaas-platform-x.x.x.jar* file from *build/libs* directory.
 + Run the NMaaS Platform with *java -jar nmaas-platform-x.x.x.jar* and optional arguments:
