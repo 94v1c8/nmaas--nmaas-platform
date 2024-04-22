@@ -15,8 +15,8 @@ test:
 sonar:
   stage: sonar
   image: openjdk:11-jdk-slim
-#  only:
-#    - develop
+  only:
+    - develop
   script:
     - chmod +x ./gradlew
     - ./gradlew integrationTest jacocoTestCoverageVerification
@@ -24,8 +24,8 @@ sonar:
 
 build_and_push_latest_image:
   stage: build
-#  only:
-#    - develop
+  only:
+    - develop
   variables:
     IMAGE_TAG: "latest"
   script:
